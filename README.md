@@ -8,3 +8,7 @@
 > [임혜지](https://github.com/LAH1203/React_study/tree/main/hyeji1221)<br>
 > [정차미](https://github.com/LAH1203/React_study/tree/main/lasilla20CHAMI)
 
+### 스터디 기록
+| Date | Homework | Participants |
+| --- | --- | --- |
+| 2021.02.25 | Section 0~2 | 이아현, 임혜지, 정차미 |
