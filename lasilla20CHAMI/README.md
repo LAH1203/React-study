@@ -14,5 +14,5 @@
 
 
 #### props (사용자 정의 태그)
-  > <속성>{this.props.이름}</속성>
-  > {this.props.동작구문이름}
+  ``` <속성>{this.props.이름}</속성>
+  {this.props.동작구문이름} ```
