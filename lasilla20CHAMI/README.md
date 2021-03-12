@@ -1,30 +1,29 @@
-어기야디어차
+정리 노트
 ====
 
 
 
 #### 👉 01 개발환경
-
-
-
+```
+npm run start
+npm run build
+npm install -g serve
+```  
 
 #### 👉 02 컴포넌트 제작
   > Javascript의 문법을 이용해 Html을 구조화
-
-
-
 **props (사용자 정의 태그)**
   ```
   <속성>{this.props.이름}</속성>
   {this.props.동작구문이름}
-  ```
+  ```  
 
 
 
   #### 👉 03 State
   > 컴포넌트가 잘 구현되기 위해서는 사용자가 접근하기 쉬운 ``Props``와, 내부의 ``State``가 분리되어 있어야 한다.
 * state로 속성을 정하고 아래 함수로 불러오면서 효율적으로 실행
-* 배열을 사용할 시, 리액트가 ``Key``값을 필요로 함
+* 배열을 사용할 시, 리액트가 ``Key``값을 필요로 함  
 
 
 
@@ -37,7 +36,7 @@
 
 **onChangePage & onClick**
 
-```
+```react
 onClick={function(e){ //함수 생성
   e.preventDefaut();
   //이벤트를 막음 (다른 페이지로 이동하는 것을 막음)
