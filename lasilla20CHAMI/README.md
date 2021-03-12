@@ -35,7 +35,7 @@
 * ``this``는 가르키는 것이 모호함. ``.bind{this}``를 뒤에 붙여주어야 함
 * ``selected_content_id``를 통해 ``mode``내에서 순번을 만들어 이벤트가 입력값(번호)에 따라 실행하게 만들 수 있음
 
-** onChangePage & onClick **
+**onChangePage & onClick**
 
 ```
 onClick={function(e){ //함수 생성
