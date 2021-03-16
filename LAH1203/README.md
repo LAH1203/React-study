@@ -50,6 +50,6 @@ npx serve -s build
 ### Section 7
 - [immutable.js](https://immutable-js.github.io/immutable-js/)
 - `npm run eject`를 사용하면 create-react-app의 감춰진 기능을 수정할 수 있게 된다. 다만 한 번 eject을 하게 되면 다시 원래 기능으로 돌아갈 수 없기 때문에 주의해야한다!
-- **REDUX**를 사용하면 각 컴포넌트를 관리하는 저장소(store)을 만들어 저장소를 통해 컴포넌트들에 편리하게 접근할 수 있다.
+- **redux**를 사용하면 각 컴포넌트를 관리하는 저장소(store)을 만들어 저장소를 통해 컴포넌트들에 편리하게 접근할 수 있다.
 - **react server side rendering**을 이용하면 서버에서 웹페이지를 완성한 후에 클라이언트에 완성된 HTML을 전송하는 기능을 쓸 수 있다. 초기 구동 시간을 단축하면서도 로딩이 필요없는 기능을 유지할 수 있다는 장점이 있다.
 - **react native**를 사용하면 react를 사용하면서도 native 앱을 만들 수 있다. native 앱이란, ios/android와 같은 것을 의미한다. 하나의 코드로 거의 모든 플랫폼에서 동작하는 애플리케이션을 만들 수 있다.
