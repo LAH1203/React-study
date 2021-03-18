@@ -31,7 +31,7 @@ npm install -g serve
   > 페이지가 rerode 되지 않고, 동적으로 바뀌는 것은 리액트의 장점이다
 * click에 따라 ``mode``를 바꾸어 실행함으로써 이벤트를 만들 수 있음
 * ``this.mode``로 직접 수정하지 말고 ``setState``를 통해 수정해야 리액트가 반영 가능
-* ``this``는 가르키는 것이 모호함. ``.bind{this}``를 뒤에 붙여주어야 함
+* ``this``는 가르키는 것이 모호함 ``.bind{this}``를 뒤에 붙여주어야 함
 * ``selected_content_id``를 통해 ``mode``내에서 순번을 만들어 이벤트가 입력값(번호)에 따라 실행하게 만들 수 있음
 
 **onChangePage & onClick**
@@ -47,5 +47,9 @@ onClick={function(e){ //함수 생성
 
 #
 #### 👉 05 Creat 기능 구현
+  >``Component``안에서 ``props``를 변경할 수 는 없다
+  >이벤트를 구현함으로써 하위 → 상위 ``Component``를 바꿀 수 있음. 반대로는 ``props`` 사용
+
+
 
 ![a](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7Ing6%2FbtqDrkNbvBs%2FMi1pUyMUSRYYLmE6zvjAG0%2Fimg.png)
