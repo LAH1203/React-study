@@ -46,10 +46,11 @@ onClick={function(e){ //함수 생성
 ```
 
 #
-#### 👉 05 Creat 기능 구현
+#### 👉 05 Create 기능 구현
   >``Component``안에서 ``props``를 변경할 수 는 없다
   >이벤트를 구현함으로써 하위 → 상위 ``Component``를 바꿀 수 있음. 반대로는 ``props`` 사용
 
 
 
 ![a](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7Ing6%2FbtqDrkNbvBs%2FMi1pUyMUSRYYLmE6zvjAG0%2Fimg.png)
+* 이벤트가 실행되는 함수를 ``handler``라고도 부름
