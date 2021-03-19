@@ -82,3 +82,13 @@ this.state.mode === '모드 이름'
 * 아래의 버튼 ``submit``를 실행했을 시 ``onSubmit``안에 들어 있는 함수를 실행함 (form에서 지원)
 
 **onSubmit 이벤트**
+```
+onSubmit={function (e) {
+                e.preventDefault();
+                this.props.onSubmit(
+                  e.taget.title.value, //입력 값을 받아 오기 (타이틀)
+                  e.taget.desc.value //입력 값 내용 받기
+                );
+              }.bind(this)
+```
+

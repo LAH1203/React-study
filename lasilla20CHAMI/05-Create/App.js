@@ -9,6 +9,7 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.max_conid = 3;
     this.state = {
       mode: 'create',
       selected_content_id: 2,
@@ -41,7 +42,9 @@ class App extends Component {
       }
       _article = <ReadContent title = {_title} desc = {_desc}></ReadContent>
     } else if(this.state.mode === 'create'){
-      _article = <CreateContent></CreateContent>
+      _article = <CreateContent onSubmit={funtion(_title, _desc)
+      
+      }></CreateContent>
     }
     return (
       <div className="App">
