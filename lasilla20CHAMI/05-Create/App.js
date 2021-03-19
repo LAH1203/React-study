@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mode: 'read',
+      mode: 'create',
       selected_content_id: 2,
       subject: {title: 'WEB', sub: 'world wide web!'},
       welcome: {title: 'Welcome', desc: 'Hello, React!!'},
@@ -64,12 +64,10 @@ class App extends Component {
         }.bind(this)}data={this.state.contents}>
 
         </TOC>
-        <Control onChangeMode={function (_mode){
-          this.setState{
-            mode:_mode;
+        <Control onChangeMode={function(_mode){
+          this.setState{ mode:_mode;
           }
-        }.bind(this)
-        }></Control>
+        }.bind(this)}></Control>
         {_article}
 
       </div>

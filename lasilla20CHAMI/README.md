@@ -24,6 +24,7 @@ npm install -g serve
   > 컴포넌트가 잘 구현되기 위해서는 사용자가 접근하기 쉬운 ``Props``와, 내부의 ``State``가 분리되어 있어야 한다.
 * state로 속성을 정하고 아래 함수로 불러오면서 효율적으로 실행
 * 배열을 사용할 시, 리액트가 ``Key``값을 필요로 함  
+* ``alert(내용)`` 경고창 띄우기
 
 
 #
@@ -33,6 +34,7 @@ npm install -g serve
 * ``this.mode``로 직접 수정하지 말고 ``setState``를 통해 수정해야 리액트가 반영 가능
 * ``this``는 가르키는 것이 모호함 ``.bind{this}``를 뒤에 붙여주어야 함
 * ``selected_content_id``를 통해 ``mode``내에서 순번을 만들어 이벤트가 입력값(번호)에 따라 실행하게 만들 수 있음
+* ``e.preventDefault()``로 새창으로 전환되는 것을 막음
 
 **onChangePage & onClick**
 
@@ -64,3 +66,17 @@ onClick={function(e){ //함수 생성
 ```
 
 **mode 전환**
+```
+<Control onChangeMode={function (_mode){
+          this.setState{
+            mode:_mode;
+          }
+위에서
+this.state.mode === '모드 이름'
+```
+
+**form 구현**
+* 값이 아무것도 없을 때 ``placeholder="title"`` title이 출력 화면에 나타나게 함
+* ``textarea`` 텍스트가 여러 줄일 때 사용
+* ``action="/주소"`` 정보를 주소로 전달
+* 아래의 버튼 ``submit``를 실행했을 시 ``onSubmit``안에 들어 있는 함수를 실행함 (form에서 지원)
