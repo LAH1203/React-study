@@ -92,3 +92,17 @@ onSubmit={function (e) {
               }.bind(this)
 ```
 
+**contents 변경**
+  > ``onSubmit event``으로 받아온 내용을 ``create``모드일 때, ``contents``에 추가시켜 주면 된다
+  * ``max_content_id``라는 변수를 만들어서 마지막 배열의 수를 저장함. 내용을 추가할 때마다 ``max_content_id``를 증가시켜줌
+* ``this.setState``를 사용하여 얻은 값을 ``state``에 추가시킬 수 있다
+* ``push``는 배열에 원소를 추가하여 오리지널 데이터를 변경함. ``concat``으로 배열에 원소를 넣으면 원본을 바꾸지 않으면서 배열을 새로 갱신함.
+* 객체를 만듦
+```
+var _contents = this.state.contents.concat(
+        {id:this.max_conid, title:_title, desc:_desc}
+      )
+this.setState({
+  contents:_contents
+});
+```

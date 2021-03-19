@@ -42,10 +42,15 @@ class App extends Component {
       }
       _article = <ReadContent title = {_title} desc = {_desc}></ReadContent>
     } else if(this.state.mode === 'create'){
-      _article = <CreateContent onSubmit={funtion(_title, _desc)
-      
+      _article = <CreateContent onSubmit={funtion(_title, _desc){
+      this.max_conid += 1;
+      var _contents = this.state.contents.concat(
+        {id:this.max_conid, title:_title, desc:_desc}
+      )
+      this.setState({
+          contents:_contents
+      });
       }></CreateContent>
-    }
     return (
       <div className="App">
           <Subject 
