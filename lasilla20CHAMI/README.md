@@ -76,7 +76,9 @@ this.state.mode === '모드 이름'
 ```
 
 **form 구현**
-* 값이 아무것도 없을 때 ``placeholder="title"`` title이 출력 화면에 나타나게 함
+* 값이 아무것도 없을 때 ``placeholder="내용"`` 내용이 출력 화면에 나타나게 함
 * ``textarea`` 텍스트가 여러 줄일 때 사용
 * ``action="/주소"`` 정보를 주소로 전달
 * 아래의 버튼 ``submit``를 실행했을 시 ``onSubmit``안에 들어 있는 함수를 실행함 (form에서 지원)
+
+**onSubmit 이벤트**
