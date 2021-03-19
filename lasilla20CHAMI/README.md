@@ -54,3 +54,13 @@ onClick={function(e){ //함수 생성
 
 ![a](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb7Ing6%2FbtqDrkNbvBs%2FMi1pUyMUSRYYLmE6zvjAG0%2Fimg.png)
 * 이벤트가 실행되는 함수를 ``handler``라고도 부름
+
+**mode 변경**
+```
+<a href="/create" onClick={function(e){
+          e.preventDefault();
+          this.props.onChangeMode('create');
+        }.bind(this)}>create</a>
+```
+
+**mode 전환**
