@@ -15,8 +15,7 @@ class App extends Component {
         {id:3, title: 'JavaScript', desc:'JavaScript is for interactive'},
       ]
     }
-  }
-  render() {
+  }render() {
     return (
       <div className="App">
         <Subject title={this.state.subject.title} sub={this.state.subject.sub}></Subject>
