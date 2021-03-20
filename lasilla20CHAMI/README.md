@@ -131,3 +131,34 @@ var x = Object.assign({객체 (빈 공간)}, 복사할 객체)
 #### 👉 06 Updata & delete
   > Update는, mode에 해당하는 id를 긁어와 ``read`` 할 수 있어야 하며 마찬가지로 입력값을 가변적으로 받아 들여 ``content``에 반영할 수 있어야 한다
 * 이때 받아온 ``props``를 변경하지 말고 ``state``화 시키는 작업이 필요함
+* ``onChange``를 통해 인덱스값 수정
+```
+constructor(props){
+  super(props) //상위 props를 선택
+  this.state = {
+    title:this.props.data.title,
+    desc:this.props.data.desc
+  }
+}
+```
+```
+inputFormHandler(e){
+  this.setState({[e.target.name]:e.tatget.value});
+}
+```
+* id값을 저장해두는 것이 좋은 이유 : 다른 용도로 활용될 가능성이 있음 (구현에 충실)
+* 메인 코드 ↓
+```
+<UpdateContent data={_cont} onSubmit={
+  function(_id, _tit, _desc){
+    var _con = Array.from(this.state.contents);
+    var i=0;
+    while(i<_con.length){
+      if(_con[i].id === _id){
+      _con[i] = {id:_id, title:_tit, desc:_desc};
+      break;
+      }
+      i++;
+    }
+  }
+}></UpdateContent>
