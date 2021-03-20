@@ -79,7 +79,7 @@ this.state.mode === '모드 이름'
 * 값이 아무것도 없을 때 ``placeholder="내용"`` 내용이 출력 화면에 나타나게 함
 * ``textarea`` 텍스트가 여러 줄일 때 사용
 * ``action="/주소"`` 정보를 주소로 전달
-* 아래의 버튼 ``submit``를 실행했을 시 ``onSubmit``안에 들어 있는 함수를 실행함 (form에서 지원)
+* 아래의 버튼 ``submit``를 실행했을 시, ``onSubmit``안에 들어 있는 함수를 실행함 (form에서 지원)
 
 **onSubmit 이벤트**
 ```
@@ -106,3 +106,28 @@ this.setState({
   contents:_contents
 });
 ```
+
+**shouldComponentUpdate & immutable**
+  >우리는 필요한 때에만 ``TOC``를 호출시킬 수 있어야 한다 (낭비X)
+```
+shouldComponentUpdate(newProps, newState){
+  if(this.props.data === newProps.data){
+    return false;
+  }
+  return true;
+}
+```
+* 이전의 데이터와 바꾼 데이터(인자값 ``newProps``)가 같다면 false를 리턴 → ``render()``가 실행되지 않는다
+* true를 리턴하였을 땐 실행됨
+* 이는 원본 배열을 변경하지 않고 복사한 후, 수정하였을 때 가능하다
+* 배열을 복사하는 방법으로는 ``Array.from()``이 있음
+* 객체를 복사하는 방법으로는 ``Object.assign()``이 있음
+```
+var x = Object.assign({객체 (빈 공간)}, 복사할 객체)
+```
+* immutable (불변성) : 원본을 변경시키지 않는 방법
+
+#
+#### 👉 06 Updata & delete
+  > Update는, mode에 해당하는 id를 긁어와 ``read`` 할 수 있어야 하며 마찬가지로 입력값을 가변적으로 받아 들여 ``content``에 반영할 수 있어야 한다
+* 이때 받아온 ``props``를 변경하지 말고 ``state``화 시키는 작업이 필요함
